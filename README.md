@@ -8,7 +8,7 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
 
 1. Clone and enter
     ```bash
-    $/> git clone ...
+    $/> git clone https://github.com/dav793/sirius-stepper.git
     $/> cd sirius-stepper
     $/sirius-stepper>
     ```
@@ -52,7 +52,7 @@ import { SiriusStepperModule } from 'sirius-stepper';
 
 ### Example App
 
-See the [example app]() for a working example.
+See the [example app](https://github.com/dav793/sirius-stepper-test) for a working example.
 
 ### Docs
 
