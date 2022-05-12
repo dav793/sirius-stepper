@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SiriusStepperComponent } from './sirius-stepper.component';
+import { SiriusLogoDirective } from './sirius-logo.directive';
 import { SiriusStepDirective } from './sirius-step.directive';
 
 @NgModule({
   declarations: [
     SiriusStepperComponent,
+    SiriusLogoDirective,
     SiriusStepDirective
   ],
   imports: [
@@ -16,9 +18,11 @@ import { SiriusStepDirective } from './sirius-step.directive';
   ],
   exports: [
     SiriusStepperComponent,
+    SiriusLogoDirective,
     SiriusStepDirective
   ],
   entryComponents: [
+    SiriusLogoDirective,
     SiriusStepDirective
   ]
 })

@@ -6,7 +6,7 @@ import {
   Input,
   TemplateRef,
   ViewContainerRef,
-  SimpleChanges, ElementRef
+  SimpleChanges
 } from '@angular/core';
 import { ReplaySubject } from 'rxjs';
 import { switchMap, takeUntil } from 'rxjs/operators';
@@ -20,6 +20,7 @@ export class SiriusStepDirective implements OnInit, OnDestroy, OnChanges {
 
   @Input('link') component: SiriusStepperComponent;
   @Input('step') stepIndex: number;
+  @Input('label') stepLabel: string;
 
   private initialized$ = new ReplaySubject<void>(1);
   private destroyed$ = new ReplaySubject<void>(1);
@@ -53,19 +54,12 @@ export class SiriusStepDirective implements OnInit, OnDestroy, OnChanges {
         return;
 
       if (command.state === 'destroy')
-        this.viewContainerRef.clear();
+        setTimeout( () => this.viewContainerRef.clear() );
       else if (command.state === 'create')
-        this.viewContainerRef.createEmbeddedView(this.templateRef);
+        setTimeout( () => this.viewContainerRef.createEmbeddedView(this.templateRef) );
 
     });
 
-  }
-
-  get elementRef(): ElementRef {
-    console.log(this.viewContainerRef.element.nativeElement);
-    return this.viewContainerRef.element.nativeElement;
-    // console.log(this.el.nativeElement);
-    // return this.el.nativeElement;
   }
 
 }
