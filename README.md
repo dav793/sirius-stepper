@@ -93,6 +93,7 @@ As an example:
   _Range : any valid CSS `color`._
   
   Set the color of muted graphics and text.
+  <br/><br/>
   
 * `font-family` _(optional)_
 
@@ -100,6 +101,7 @@ As an example:
   _Range : any valid CSS `font-family`._
   
   Set the font used in text.  
+  <br/><br/>
   
 * `font-size` _(optional)_
 
@@ -107,6 +109,7 @@ As an example:
   _Range : any valid value for the CSS property `font-size`._
   
   Set the size of text.  
+  <br/><br/>
   
 * `[override-step]` _(optional)_
 
@@ -114,23 +117,27 @@ As an example:
   
   Use this Input to manually override the current step viewed. 
   
-  If you provide an Observable, whenever it emits a number, it will set the current step index to it.   
+  If you provide an Observable, whenever it emits a number, it will set the current step index to it.
+  <br/><br/>   
   
 * `(steps)` _(optional)_
 
   _Type: `EventEmitter<number[]>`_
   
-  On this Output, the stepper component will emit an array containing the indexes of all steps, whenever they are changed in the template. 
+  On this Output, the stepper component will emit an array containing the indexes of all steps, whenever they are changed in the template.
+  <br/><br/> 
 
 * `(step-changes)` _(optional)_
 
   _Type: `EventEmitter<number>`_
   
   On this Output, the stepper component will emit the current step's index, whenever it changes.
+  <br/><br/>
   
 * `#stepper`
 
   Required template reference to link the steps with the stepper component.
+  <br/><br/>
   
 #### sirius-logo
 Add an `ng-template` tag with this directive inside the stepper component to set your company logo.
@@ -185,15 +192,18 @@ As an example:
   _Type: `SiriusStepperComponent`_
   
   Required to link the step with the stepper component.
+  <br/><br/>
 
 * `[step]`
 
   _Type: `number`_
   
   Set a unique index for the step. The steps will be ordered in ascending order by their step index. 
+  <br/><br/>
 
 * `label` _(optional)_
 
   _Type: `string`_
   
   Set the text to label this step in the step controls.
+  <br/><br/>
