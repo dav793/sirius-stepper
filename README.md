@@ -85,6 +85,7 @@ As an example:
   _Range : any valid CSS `color`._
   
   Set the color of highlighted graphics and text.
+  <br/><br/>
   
 * `muted-color` _(optional)_
 
