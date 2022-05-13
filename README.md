@@ -12,8 +12,13 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
     $/> cd sirius-stepper
     $/sirius-stepper>
     ```
+    
+2. Install dependencies
+    ```bash
+    $/sirius-stepper> npm install
+    ``` 
 
-2. Build lib
+3. Build lib
     
     **Production:**
     ```bash
@@ -24,13 +29,13 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
     $/sirius-stepper> ng build sirius-stepper --watch
     ```
 
-3. Link lib build with NPM locally
+4. Link lib build with NPM locally
     ```bash
     $/sirius-stepper> cd dist/sirius-stepper
     $/sirius-stepper/dist/sirius-stepper> npm link
     ```
 
-4. Finally, link back in your application
+5. Finally, link back in your application
     ```bash
     $/> cd ${APP_ROOT}
     $/APP_ROOT> npm link sirius-stepper 
