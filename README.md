@@ -79,7 +79,7 @@ As an example:
 ```
 
 ##### Properties
-* `theme-color` _(optional)_
+* `highlight-color` _(optional)_
 
   _Type: `string`_ \
   _Range : any valid CSS `color`._
