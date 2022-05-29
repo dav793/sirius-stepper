@@ -12,14 +12,17 @@
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/sirius-stepper/tsconfig.lib.json",
             "project": "projects/sirius-stepper/ng-package.json"
           },
           "configurations": {
             "production": {
               "tsConfig": "projects/sirius-stepper/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/sirius-stepper/tsconfig.lib.json"
             }
-          }
+          },
+          "defaultConfiguration": "production"
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -27,18 +30,6 @@
             "main": "projects/sirius-stepper/src/test.ts",
             "tsConfig": "projects/sirius-stepper/tsconfig.spec.json",
             "karmaConfig": "projects/sirius-stepper/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/sirius-stepper/tsconfig.lib.json",
-              "projects/sirius-stepper/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }

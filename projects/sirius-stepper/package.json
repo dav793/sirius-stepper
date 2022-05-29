@@ -2,11 +2,10 @@
   "name": "sirius-stepper",
   "version": "0.0.1",
   "peerDependencies": {
-    "@angular/common": "^11.0.9",
-    "@angular/core": "^11.0.9"
+    "@angular/common": "^13.2.0",
+    "@angular/core": "^13.2.0"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
-  },
-  "devDependencies": {}
+    "tslib": "^2.3.0"
+  }
 }

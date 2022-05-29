@@ -248,6 +248,8 @@ export class SiriusStepperComponent implements OnDestroy, AfterViewInit {
 
     });
 
+    if (!this.overrideIndex$)
+      return;
     this.overrideIndex$.pipe(
       takeUntil(this.destroyed$)
     ).subscribe(newIndex => {
