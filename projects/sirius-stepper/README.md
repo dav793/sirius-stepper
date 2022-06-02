@@ -4,7 +4,30 @@ An Angular library for a Stepper UI component.
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0
 
-## Installation
+## Usage
+ 
+### Install library
+```bash
+npm install --save sirius-stepper
+```
+ 
+### Import module in your application
+
+```javascript
+import { SiriusStepperModule } from 'sirius-stepper';
+
+@NgModule({
+  ...
+  imports: [ SiriusStepperModule ],
+  ...
+})
+```
+
+### Example App
+
+See the [example app](https://github.com/dav793/sirius-stepper-test) for a working example.
+
+## Development: Build library and link locally
 
 1. Clone and enter
     ```bash
@@ -35,7 +58,7 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
     $/sirius-stepper/dist/sirius-stepper> npm link
     ```
 
-5. Finally, link back in your application
+5. Link back in your application
     ```bash
     $/> cd ${APP_ROOT}
     $/APP_ROOT> npm link sirius-stepper 
@@ -48,23 +71,22 @@ This library was generated with [Angular CLI](https://github.com/angular/angular
     ```
     This step should not be necessary if you only build your application in production.
     
-## Usage
- 
-### Import module in your application
-
-```javascript
-import { SiriusStepperModule } from 'sirius-stepper';
-
-@NgModule({
-  ...
-  imports: [ SiriusStepperModule ],
-  ...
-})
-```
-
-### Example App
-
-See the [example app](https://github.com/dav793/sirius-stepper-test) for a working example.
+7. When you're ready to publish a new version to npm, bump the latest version.
+    ```bash
+    npm version patch
+    ```    
+    Or
+    ```bash
+    npm version minor
+    ```
+    Or    
+    ```bash
+    npm version major
+    ```
+    Then,
+    ```bash
+    npm publish
+    ```    
 
 ### Docs
 
