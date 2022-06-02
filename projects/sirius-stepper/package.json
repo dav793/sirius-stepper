@@ -1,6 +1,15 @@
 {
   "name": "sirius-stepper",
   "version": "0.0.1",
+  "description": "An Angular library for a Stepper UI component",
+  "license": "MIT",
+  "keywords": [
+    "stepper"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dav793/sirius-stepper.git"
+  },
   "peerDependencies": {
     "@angular/common": "^13.2.0",
     "@angular/core": "^13.2.0"
