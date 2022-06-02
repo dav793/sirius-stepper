@@ -10,8 +10,9 @@ import { SiriusStepDirective } from './sirius-step.directive';
   template: `    
     <div class="header">
       
-      <div class="logo">
+      <div class="brand">
         <ng-content select="[sirius-logo]"></ng-content>
+        <ng-content select="[sirius-title]"></ng-content>
       </div>
       
       <div class="ctrlPanel">
@@ -60,7 +61,10 @@ import { SiriusStepDirective } from './sirius-step.directive';
       width: 100%
     }
     
-    .logo {
+    .brand {
+      display: flex; 
+      flex-direction: row;
+      align-items: center;
       text-align: center;
     }
     
