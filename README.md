@@ -107,6 +107,7 @@ As an example:
 >
 
     <!-- add your logo here -->
+    <!-- add your title here -->
     <!-- add your steps here -->
     
 </lib-sirius-stepper>
@@ -187,6 +188,26 @@ As an example:
   
     <!-- Add your logo HTML here -->
     <img src="/assets/logo.png" alt="image">
+    
+  </ng-template>
+
+</lib-sirius-stepper>
+```
+
+#### sirius-title
+Add an `ng-template` tag with this directive inside the stepper component to set your company title.
+
+As an example:
+```html
+<lib-sirius-stepper
+    ...
+    #stepper
+>
+  
+  <ng-template sirius-title>
+  
+    <!-- Add your title HTML here -->
+    <h1>Your Product Name</h1>
     
   </ng-template>
 
