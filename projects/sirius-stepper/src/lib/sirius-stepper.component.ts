@@ -128,9 +128,9 @@ export class SiriusStepperComponent implements OnDestroy, AfterViewInit {
   @Output('step-changes') indexChanges = new EventEmitter<number>(true);
   @Output('steps') indexes = new EventEmitter<number[]>(true);
   @Input('override-step') overrideIndex$: Observable<number>;
-  @Input('highlight-color') highlightColor = '#000000';
-  @Input('muted-color') mutedColor = '#AAAAAA';
-  @Input('font-family') fontFamily = 'Arial';
+  @Input('highlight-color') highlightColor = '#D76928';
+  @Input('muted-color') mutedColor = '#A2A4AD';
+  @Input('font-family') fontFamily = 'Bryant Pro Semibold';
   @Input('font-size') fontSize = 'inherit';
 
   private _steps$ = new BehaviorSubject<{ [index: string]: SiriusStepDirective }>({});
