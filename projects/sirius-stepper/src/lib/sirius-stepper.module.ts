@@ -4,12 +4,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SiriusStepperComponent } from './sirius-stepper.component';
 import { SiriusLogoDirective } from './sirius-logo.directive';
+import { SiriusTitleDirective } from './sirius-title.directive';
 import { SiriusStepDirective } from './sirius-step.directive';
 
 @NgModule({
   declarations: [
     SiriusStepperComponent,
     SiriusLogoDirective,
+    SiriusTitleDirective,
     SiriusStepDirective
   ],
   imports: [
@@ -19,10 +21,12 @@ import { SiriusStepDirective } from './sirius-step.directive';
   exports: [
     SiriusStepperComponent,
     SiriusLogoDirective,
+    SiriusTitleDirective,
     SiriusStepDirective
   ],
   entryComponents: [
     SiriusLogoDirective,
+    SiriusTitleDirective,
     SiriusStepDirective
   ]
 })
