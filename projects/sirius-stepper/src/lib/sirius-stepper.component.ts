@@ -16,19 +16,20 @@ import { SiriusStepDirective } from './sirius-step.directive';
       </div>
       
       <div class="ctrlPanel">
-        <ng-container *ngFor="let stepIndex of stepIndexes">
+        <ng-container *ngFor="let stepIndex of stepIndexes; let idx = index">
           
           <div class="ctrlBtn">
             <div class="gutterTop"></div>
             
-            <div class="topWrap">
+            <div class="topWrap" (mouseover)="hoverIn(idx)" (mouseleave)="hoverOut()">
               <div class="lineLeft"
                 [ngClass]="{'invisible': isFirstStep(stepIndex)}" 
                 [style]="'border-color: ' + this.getColor(stepIndex)"
               ></div>
               
-              <button id="sscb_{{stepIndex}}"
+              <button class="stepBtn" id="sscb_{{stepIndex}}"
                 [style]="'background-color: ' + this.getColor(stepIndex)"
+                [ngStyle]="{'transform': isHovering(idx)  ? 'scale(' + hoverSize + ')' : 'scale(1.0)'}"
                 (click)="transitionToStep( stepIndex )"
               ></button>
               
@@ -105,6 +106,7 @@ import { SiriusStepDirective } from './sirius-step.directive';
     .ctrlBtn label {
       padding: 8px 12px 0 12px;
       text-align: center;
+      cursor: pointer;
     }
     
     .step-wrapper {
@@ -113,6 +115,14 @@ import { SiriusStepDirective } from './sirius-step.directive';
     
     .invisible {
       visibility: hidden;
+    }
+
+    .ctrlBtn .stepBtn {
+      transition: all .2s ease-in-out;
+    }
+
+    .ctrlBtn .stepBtn:hover {
+      cursor: pointer;
     }
 
     @media only screen and (min-width: 600px) {
@@ -136,6 +146,7 @@ export class SiriusStepperComponent implements OnDestroy, AfterViewInit {
   @Input('muted-color') mutedColor = '#AAAAAA';
   @Input('font-family') fontFamily = 'Arial';
   @Input('font-size') fontSize = 'inherit';
+  @Input('hover-size') hoverSize = '1.5';
 
   private _steps$ = new BehaviorSubject<{ [index: string]: SiriusStepDirective }>({});
   private _stepViewIndex$ = new ReplaySubject<number>(1);
@@ -143,6 +154,7 @@ export class SiriusStepperComponent implements OnDestroy, AfterViewInit {
   private _currentStepIndex: number;
   private _currentStepIndexImmediate: number;
   private _animating = false;
+  hoverIdx = -1;
 
   private destroyed$ = new ReplaySubject<void>(1);
 
@@ -324,6 +336,18 @@ export class SiriusStepperComponent implements OnDestroy, AfterViewInit {
       style({ opacity: '*', bottom: '*' }),
       animate('200ms ease-in', style({ opacity: 0, bottom: -20 }))
     ];
+  }
+
+  hoverIn(idx: number): void {
+    this.hoverIdx = idx;
+  }
+
+  hoverOut(): void {
+    this.hoverIdx = -1;
+  }
+
+  isHovering(idx: number): boolean {
+    return this.hoverIdx === idx;
   }
 
 }

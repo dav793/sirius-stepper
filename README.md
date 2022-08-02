@@ -146,6 +146,14 @@ As an example:
   Set the size of text.  
   <br/><br/>
   
+* `hover-size` _(optional)_
+
+  _Type: `string`_ \
+  _Range : any percentual value, where a value of `1` equals 100%. Eg. `1`, `1.5`, `0.75`, etc._
+  
+  Set the size of the step bubbles on mouse hover.
+  <br/><br/>
+  
 * `[override-step]` _(optional)_
 
   _Type: `Observable<number>`_
