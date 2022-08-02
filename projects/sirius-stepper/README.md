@@ -71,7 +71,7 @@ See the [example app](https://github.com/dav793/sirius-stepper-test) for a worki
     ```
     This step should not be necessary if you only build your application in production.
     
-7. When you're ready to publish a new version to npm, bump the latest version.
+7. When you're ready to publish a new version to npm, go to `/projects/sirius-stepper` and bump the latest version.
     ```bash
     npm version patch
     ```    
@@ -83,7 +83,7 @@ See the [example app](https://github.com/dav793/sirius-stepper-test) for a worki
     ```bash
     npm version major
     ```
-    Then,
+    Then, publish to NPM
     ```bash
     npm publish
     ```    
@@ -100,6 +100,7 @@ As an example:
   muted-color="#aaaaaa"
   font-family="Helvetica"
   font-size="12px"
+  hover-size="1.5"
   [override-step]="overrideStepIndex$"
   (steps)="stepsChanged($event)"
   (step-changes)="stepIndexChanged($event)"
@@ -144,6 +145,14 @@ As an example:
   _Range : any valid value for the CSS property `font-size`._
   
   Set the size of text.  
+  <br/><br/>
+  
+* `hover-size` _(optional)_
+
+  _Type: `string`_ \
+  _Range : any percentual value, where a value of `1` equals 100%. Eg. `1`, `1.5`, `0.75`, etc._
+  
+  Set the size of the step bubbles on mouse hover.
   <br/><br/>
   
 * `[override-step]` _(optional)_

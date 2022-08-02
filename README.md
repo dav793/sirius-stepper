@@ -71,7 +71,7 @@ See the [example app](https://github.com/dav793/sirius-stepper-test) for a worki
     ```
     This step should not be necessary if you only build your application in production.
     
-7. When you're ready to publish a new version to npm, bump the latest version.
+7. When you're ready to publish a new version to npm, go to `/projects/sirius-stepper` and bump the latest version.
     ```bash
     npm version patch
     ```    
@@ -83,7 +83,7 @@ See the [example app](https://github.com/dav793/sirius-stepper-test) for a worki
     ```bash
     npm version major
     ```
-    Then,
+    Then, publish to NPM
     ```bash
     npm publish
     ```    
@@ -100,6 +100,7 @@ As an example:
   muted-color="#aaaaaa"
   font-family="Helvetica"
   font-size="12px"
+  hover-size="1.5"
   [override-step]="overrideStepIndex$"
   (steps)="stepsChanged($event)"
   (step-changes)="stepIndexChanged($event)"
