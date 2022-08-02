@@ -1,6 +1,6 @@
 {
   "name": "sirius-stepper-2",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An Angular library for a Stepper UI component",
   "author": "David Vargas <dav793@gmail.com>",
   "license": "MIT",
